@@ -1,0 +1,6 @@
+pyuseragents==1.0.5
+capmonster-python==2.2
+python-dotenv==0.19.2
+PySocks==1.7.1
+urllib3==1.23
+loguru==0.6.0
