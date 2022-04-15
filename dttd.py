@@ -59,7 +59,7 @@ def take_random_proxy():
 	return(choice(proxies))
 
 def mainth(current_email):
-	for _ in range(5):
+	for _ in range(100):
 		try:
 			session = Session()
 			session.headers.update({'user-agent': random_useragent(), 'Content-Type': 'application/json', 'X-Wix-Client-Artifact-Id': 'wix-form-builder', 'Referer': 'https://www.dttd.io/_partials/wix-thunderbolt/dist/clientWorker.cd194b3d.bundle.min.js'})
@@ -110,6 +110,8 @@ def mainth(current_email):
 				file.write(f'{current_email}\n')
 
 			logger.success(f'{current_email} | Successfully registered')
+
+			return
 
 	with open('unregistered.txt', 'a') as file:
 		file.write(f'{current_email}\n')
